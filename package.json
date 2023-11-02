@@ -11,7 +11,7 @@
   },
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "postinstall": "simple-git-hooks",
+    "postinstall": "simple-git-hooks && sed -i '' 's/1077969938624553050/1166847114203123795/g' ./node_modules/midjourney-fetch/dist/esm/index.js",
     "dev": "cross-env NODE_ENV=development astro dev",
     "start": "cross-env NODE_ENV=development astro dev --host",
     "build": "astro build",
