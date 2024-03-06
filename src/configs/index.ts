@@ -5,19 +5,13 @@ export const localConversationKey = 'LOCAL_CONVERSATION';
 
 // From https://platform.openai.com/docs/models/model-endpoint-compatibility
 export const supportedModels = [
-  'gpt-4',
-  'gpt-4-0613',
-  'gpt-4-32k',
-  'gpt-4-32k-0613',
-  'gpt-3.5-turbo',
-  'gpt-3.5-turbo-0613',
-  'gpt-3.5-turbo-16k',
-  'gpt-3.5-turbo-16k-0613',
+  'mixtral-8x7b-32768',
+  'llama2-70b-4096',
 ] as const;
 
 export type SupportedModel = (typeof supportedModels)[number];
 
-export const defaultModel: SupportedModel = 'gpt-3.5-turbo';
+export const defaultModel: SupportedModel = 'mixtral-8x7b-32768';
 
 export const supportedImageModels = [
   'DALL-E',
